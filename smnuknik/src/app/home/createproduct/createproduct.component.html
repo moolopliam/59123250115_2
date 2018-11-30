@@ -1,0 +1,61 @@
+<app-content>
+    <br><br>
+      <form [formGroup]="form" (submit) = "onSubmit()">
+        <div class="row">
+          <label for="">รหัสประชาชน</label>
+          <input type="text" class="form-control"
+          formControlName="PERSION_NUMBER" >
+        </div>
+        <br>
+        <div class="row">
+            <div class="input-group mb-3"  >
+              <div class="input-group-append">
+                  <label class="input-group-text" for="inputGroupSelect02">คำนำหน้า</label>
+                </div>
+                <select class="custom-select"  formControlName="INITIAL_CODE">
+                  <option value="" >เลือก</option>
+                  <option value="M" >นาย</option>
+                  <option value="F" >นาง</option>
+                  <option value="F" >นางสาว</option>
+                  <option value="F" >เด็กหญิง</option>
+                  <option value="F" >เด็กชาย</option>
+                </select>
+              </div>
+          </div>
+          <br>
+          <div class="row">
+              <label for="">ชื่อ</label>
+              <input type="text" class="form-control" 
+              formControlName="NAME">
+          </div>
+          <br>
+          <div class="row">
+       
+              <label for="">นามสกุล</label>
+              <input type="ntext" class="form-control" 
+              formControlName="LASTNAME">
+          </div>
+          <br>
+          <div class="row">
+       
+            <label for="">อายุ</label>
+            <input type="ntext" class="form-control" 
+            formControlName="AGE">
+        </div>
+                    <br>
+        <div class="input-group mb-3"  >
+        <select class="custom-select"  formControlName="GENDER">
+         <div class="input-group-append">
+          <label class="input-group-text" for="inputGroupSelect02">เพศ</label>
+          </div>
+          <option value="" >เลือกเพศ</option>
+          <option value="M" >ชาย</option>
+          <option value="F" >หญิง</option>
+          </select>           
+          </div>
+            <br>
+            <div class="row">
+                <button type="submit" class="btn btn-success">บันทึก</button>
+            </div>
+      </form>
+  </app-content>
